@@ -1,94 +1,89 @@
+# mono.lgr.dev
 
+Welcome to the monorepo for `@lgr.dev`.
 
-# LgrDev
+## Prerequisites
 
-This project was generated using [Nx](https://nx.dev).
+### Node.js
 
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
+Install [Node.js](https://nodejs.org/) which includes [Node Package Manager](https://docs.npmjs.com/getting-started).
 
-🔎 **Smart, Fast and Extensible Build System**
+### Nx
 
-## Adding capabilities to your workspace
+Install the [Nx CLI](https://nx.dev/getting-started/nx-setup#install-nx-cli) globally.
 
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
+## Get Started
 
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
+The following commands may require a `project-name` to be specified. For a full list of project names, please refer to
+the [workspace.json](./workspace.json) file.
 
-Below are our core plugins:
+### Development Server
 
-- [React](https://reactjs.org)
-  - `npm install --save-dev @nrwl/react`
-- Web (no framework frontends)
-  - `npm install --save-dev @nrwl/web`
-- [Angular](https://angular.io)
-  - `npm install --save-dev @nrwl/angular`
-- [Nest](https://nestjs.com)
-  - `npm install --save-dev @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `npm install --save-dev @nrwl/express`
-- [Node](https://nodejs.org)
-  - `npm install --save-dev @nrwl/node`
+Run `nx serve project-name` for an app development server. Navigate to http://localhost:4200/. The app will
+automatically reload if you change any of the source files.
 
-There are also many [community plugins](https://nx.dev/community) you could add.
+### Build
 
-## Generate an application
+Run `nx build project-name` to build the project. The build artifacts will be stored in the `dist/` directory. Use
+the `--prod` flag for a production build.
 
-Run `nx g @nrwl/react:app my-app` to generate an application.
+### Unit tests
 
-> You can use any of the plugins above to generate applications as well.
-
-When using Nx, you can create multiple applications and libraries in the same workspace.
-
-## Generate a library
-
-Run `nx g @nrwl/react:lib my-lib` to generate a library.
-
-> You can also use any of the plugins above to generate libraries as well.
-
-Libraries are shareable across libraries and applications. They can be imported from `@lgr.dev/mylib`.
-
-## Development server
-
-Run `nx serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `nx g @nrwl/react:component my-component --project=my-app` to generate a new component.
-
-## Build
-
-Run `nx build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `nx test my-app` to execute the unit tests via [Jest](https://jestjs.io).
+Run `nx test project-name` to execute the unit tests via [Jest](https://jestjs.io).
 
 Run `nx affected:test` to execute the unit tests affected by a change.
 
-## Running end-to-end tests
+### End-to-end tests
 
-Run `nx e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
+Run `nx e2e project-name` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
 
 Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
 
-## Understand your workspace
+## Contributing
 
-Run `nx graph` to see a diagram of the dependencies of your projects.
+### Commit Message Format
 
-## Further help
+Please adhere to the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification for adding
+human and machine-readable meaning to commit messages.
 
-Visit the [Nx Documentation](https://nx.dev) to learn more.
+#### Commit Message Header
 
+```text
+<type>([optional scope]): <short summary>
 
+[optional body]
 
-## ☁ Nx Cloud
+[optional footer(s)]
+```
 
-### Distributed Computation Caching & Distributed Task Execution
+##### Type
 
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
+- **build:** Changes to the build system or external dependencies
+- **ci:** Changes to the continuous integration configuration
+- **docs:** Changes to documentation
+- **feat:** Changes which include a new feature
+- **fix:** Changes which include a bug fix
+- **perf:** Changes which include a performance improvement
+- **refactor:** Changes which neither fix a bug nor add a feature
+- **style:** Changes to styling
+- **test:** Changes to unit tests or end-to-end tests
 
-Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
+##### Scope
 
-Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
+- **workspace:** Changes to the workspace
 
-Visit [Nx Cloud](https://nx.app/) to learn more.
+##### Summary
+
+Use the summary field to provide a succinct description of the changes:
+
+- Use the imperative, present tense (i.e. 'change', not 'changed' nor 'changes')
+- Do not capitalise the first letter
+- Do not include a period at the end
+
+## Workspace
+
+Run `nx graph` to see a diagram of the dependencies of the projects.
+
+### Applications
+
+### Libraries
