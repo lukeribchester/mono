@@ -1,4 +1,6 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "shared-timed-promise": "libs/shared/timed-promise"
+  }
 }

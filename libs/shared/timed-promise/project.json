@@ -1,0 +1,32 @@
+{
+  "root": "libs/shared/timed-promise",
+  "sourceRoot": "libs/shared/timed-promise/src",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/shared/timed-promise",
+        "main": "libs/shared/timed-promise/src/index.ts",
+        "tsConfig": "libs/shared/timed-promise/tsconfig.lib.json",
+        "assets": ["libs/shared/timed-promise/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/shared/timed-promise/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/timed-promise"],
+      "options": {
+        "jestConfig": "libs/shared/timed-promise/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
